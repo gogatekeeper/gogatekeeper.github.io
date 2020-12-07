@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.78.2" />
+    <meta name="description" content="Gatekeeper&#39;s homepage">
+<meta name="author" content="go-gatekeeper">
+
+    <link rel="shortcut icon" href="/logo/logo.svg" type="image/x-icon" />
+
+    <title>Configuration Options - Gatekeeper</title>
+
+    
+    <link href="/css/nucleus.css?1607360123" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1607360123" rel="stylesheet">
+    <link href="/css/hybrid.css?1607360123" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1607360123" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1607360123" rel="stylesheet">
+    <link href="/css/auto-complete.css?1607360123" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1607360123" rel="stylesheet">
+    <link href="/css/theme.css?1607360123" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1607360123" rel="stylesheet">
+    
+    <link href="/css/theme-blue.css?1607360123" rel="stylesheet">
+    
+    <link href="/css/index.css?1607360123" rel="stylesheet">
+
+    <script src="/js/jquery-3.3.1.min.js?1607360123"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/configuration/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href='/'>
+  <img src="/logo/logo.svg" width="200" />
+  <div id="logo-text">gatekeeper</div>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1607360123"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1607360123"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/go-gatekeeper.github.io\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1607360123"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/configuration/" title="Configuration Options" class="dd-item
+        parent
+        active
+        
+        ">
+      <a href="/configuration/">
+          Configuration Options
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://github.com/go-gatekeeper/gatekeeper"><i class='fab fa-github fa-fw'></i> Github repo</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://discord.gg/zRqVXXTMCv"><i class='fab fa-discord fa-fw'></i> Join us on Discord</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://www.keycloak.org/documentation"><i class='fas fa-code fa-fw'></i> Keycloak Docs</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > Configuration Options
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#listen"><code>listen</code></a></li>
+    <li><a href="#listen-http"><code>listen-http</code></a></li>
+    <li><a href="#discovery-url"><code>discovery-url</code></a></li>
+    <li><a href="#client-id"><code>client-id</code></a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#client-secret"><code>client-secret</code></a></li>
+    <li><a href="#redirection-url"><code>redirection-url</code></a></li>
+    <li><a href="#revocation-url"><code>revocation-url</code></a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Configuration Options
+            </h1>
+          
+
+        
+
+
+
+	<h2 id="listen"><code>listen</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>LISTEN</code></li>
+<li>Example: <code>:80</code></li>
+<li>Required: Yes</li>
+<li>Default: None</li>
+<li>Related: <code>listen-http</code></li>
+</ul>
+</div>
+
+<p><code>listen</code> configures the main listening interface (compare with <code>listen-http</code>). Examples for</p>
+<ul>
+<li>regular <code>http(s)</code>:
+<ul>
+<li>use <code>:80</code> or <code>:443</code> to listen on all interfaces</li>
+<li><code>127.0.0.1:443</code> to only listen on a certain interface</li>
+</ul>
+</li>
+<li>unix socket: <code>unix:///tmp/echo.sock</code> (add the prefix <code>unix://</code>)</li>
+</ul>
+
+<div class="notices info" ><p>This config is passed to golang&rsquo;s <code>net.Listen()</code>, so use strings acceptable by <code>address</code>.</p>
+</div>
+
+<hr>
+<h2 id="listen-http"><code>listen-http</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>LISTEN_HTTP</code></li>
+<li>Example: <code>:80</code></li>
+<li>Required: Yes</li>
+<li>Default: None</li>
+<li>Related: <code>listen</code></li>
+</ul>
+</div>
+
+<p><code>listen-http</code> configures the secondary listening interface.
+This listener has no TLS support, and uses the same configuration syntax as <code>listen</code>.</p>
+
+<div class="notices info" ><p>Usually, we only use <code>listen</code> and not set <code>listen-http</code>.</p>
+</div>
+
+<hr>
+<h2 id="discovery-url"><code>discovery-url</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>DISCOVERY_URL</code></li>
+<li>Example: <code>https://keycloak.localhost/auth/realms/applications</code> (refer to <a href="https://github.com/go-gatekeeper/demo-docker-compose">demo</a>)</li>
+<li>Required: Yes, unless <code>skip-token-verification</code> is set, and louketo is in reverse proxy mode</li>
+<li>Default: None</li>
+<li>Related: <code>skip-openid-provider-tls-verify</code>, <code>openid-provider-proxy</code>, <code>openid-provider-timeout</code></li>
+</ul>
+</div>
+
+<p>louketo will get information about the authorization server through the
+authorization server&rsquo;s <code>openid-configuration</code> well-known URI, according to
+<a href="https://tools.ietf.org/html/rfc8414">RFC8414</a>.</p>
+<p>louketo will grab this metadata from <code>discovery-url</code> + <code>/.well-known/openid-configuration</code>
+as is registered with <a href="https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml">IANA</a></p>
+<p>Specify <code>discovery-url</code> without <code>/.well-known/openid-configuration</code>.</p>
+<p>Here are links to information about <code>discovery-url</code>s for some other OAuth providers</p>
+<ul>
+<li><a href="https://developers.google.com/identity/protocols/oauth2/openid-connect">Google Identity Platform</a></li>
+<li><a href="https://auth0.com/docs/protocols/configure-applications-with-oidc-discovery">Auth0</a></li>
+<li><a href="https://docs.identityserver.io/en/dev/endpoints/discovery.html">IdentityServer4</a></li>
+<li><a href="https://docs.pingidentity.com/bundle/pingfederate-90/page/concept_openIdConnectMetadataEndpoint.html">PingFederate</a></li>
+</ul>
+<hr>
+<h2 id="client-id"><code>client-id</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>CLIENT_ID</code></li>
+<li>Example: <code>whoami</code> (refer to <a href="https://github.com/go-gatekeeper/demo-docker-compose">demo</a>)</li>
+<li>Required: Yes, unless <code>skip-token-verification</code> is set, and louketo is in reverse proxy mode</li>
+<li>Default: None</li>
+<li>Related: <code>client-secret</code></li>
+</ul>
+</div>
+
+<p><code>client-id</code> is the Client ID for an OAuth2 client (your app is the OAuth2 client, in
+this case).</p>
+<h4 id="in-reverse-proxy-mode">In reverse proxy mode</h4>
+<p>As part of the OAuth2 authorization code flow, louketo will use <code>client-id</code> and
+<code>client-secret</code> to authenticate with the server when it needs to</p>
+<ul>
+<li>exchange the authorization code for tokens</li>
+<li>refresh the access token</li>
+</ul>
+<p>The client ID and secret are also used to invoke the revocation URL at the
+authorization server.</p>
+<p>If the login handler is enabled (<code>enable-login-handler</code>), the credentials are
+also used to login at the authorization provider using the OAuth2 Resource
+Owner Password Credentials flow.</p>
+<p><code>client-id</code> is also used to check access tokens to ensure that <code>client-id</code> is
+among the audiences in the <code>aud</code> field of the token.</p>
+<h4 id="in-forward-signing-proxy-mode">In forward-signing proxy mode</h4>
+<p>louketo will use louketo <code>client-id</code> and <code>client-secret</code> to authenticate with
+the server to get tokens for outbound requests.</p>
+<hr>
+<h2 id="client-secret"><code>client-secret</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>CLIENT_SECRET</code></li>
+<li>Example: <code>932475b6-9748-41b8-8fd7-c6ce2d845ece</code> (refer to <a href="https://github.com/go-gatekeeper/demo-docker-compose">demo</a>)</li>
+<li>Required: Yes, unless <code>skip-token-verification</code> is set, and louketo is in reverse proxy mode</li>
+<li>Default: None</li>
+<li>Related: <code>client-id</code></li>
+</ul>
+</div>
+
+<p><code>client-secret</code> is the client secret for an OAuth2 client (your app is the
+OAuth2 client, in this case). This is used with <code>client-id</code> as a pair of
+credentials. See <code>client-id</code> for how this is used.</p>
+<hr>
+<h2 id="redirection-url"><code>redirection-url</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>REDIRECTION_URL</code></li>
+<li>Example: <code>932475b6-9748-41b8-8fd7-c6ce2d845ece</code> (refer to <a href="https://github.com/go-gatekeeper/demo-docker-compose">demo</a>)</li>
+<li>Required: Yes, unless <code>skip-token-verification</code> is set, and louketo is in reverse proxy mode</li>
+<li>Default: None</li>
+<li>Related: <code>client-id</code></li>
+</ul>
+</div>
+
+<p><code>client-secret</code> is the client secret for an OAuth2 client (your app is the
+OAuth2 client, in this case). This is used with <code>client-id</code> as a pair of
+credentials. See <code>client-id</code> for how this is used.</p>
+<hr>
+<h2 id="revocation-url"><code>revocation-url</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>REVOCATION_URL</code></li>
+<li>Example: <code>https://keycloak.localhost/auth/realms/applications/protocol/openid-connect/logout</code></li>
+<li>Required: No. Will attempt to discover this url from OpenID discovery-url response</li>
+<li>Default: None</li>
+<li>Related: <code>discovery-url</code></li>
+</ul>
+</div>
+
+<p>If <code>revocation-url</code> is not specified, the <code>end_session_endpoint</code> of the OpenID
+discovery-url response will be used as the <code>revocation-url</code>. If neither is
+available, no logout at the authorization provider will be done.</p>
+<p><code>revocation-url</code> is used during the logout process. When the <code>/oauth/logout</code>
+endpoint on louketo is called, louketo will request revocation of this
+session&rsquo;s refresh token by doing an authenticated <code>POST</code> to this <code>revocation-url</code>
+with the refresh token.</p>
+<hr>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1607360123"></script>
+    <script src="/js/perfect-scrollbar.min.js?1607360123"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1607360123"></script>
+    <script src="/js/jquery.sticky.js?1607360123"></script>
+    <script src="/js/featherlight.min.js?1607360123"></script>
+    <script src="/js/highlight.pack.js?1607360123"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1607360123"></script>
+    <script src="/js/learn.js?1607360123"></script>
+    <script src="/js/hugo-learn.js?1607360123"></script>
+    
+        
+            <script src="/mermaid/mermaid.js?1607360123"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>

@@ -4,3 +4,17 @@
   letter-spacing: -1px;
   margin-top: -20px;
 }
+
+div.config-details {
+  background: #f6f6f6;
+  border-radius: 10px;
+}
+
+div.config-details ul {
+  padding: 7px 10px;
+}
+
+div.config-details li {
+  list-style-type: none;
+  font-size: 80%;
+}
