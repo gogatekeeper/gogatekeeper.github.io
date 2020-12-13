@@ -12,21 +12,21 @@
     <title>Configuration Options - Gatekeeper</title>
 
     
-    <link href="/css/nucleus.css?1607360123" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1607360123" rel="stylesheet">
-    <link href="/css/hybrid.css?1607360123" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1607360123" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1607360123" rel="stylesheet">
-    <link href="/css/auto-complete.css?1607360123" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1607360123" rel="stylesheet">
-    <link href="/css/theme.css?1607360123" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1607360123" rel="stylesheet">
+    <link href="/css/nucleus.css?1607837373" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1607837373" rel="stylesheet">
+    <link href="/css/hybrid.css?1607837373" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1607837373" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1607837373" rel="stylesheet">
+    <link href="/css/auto-complete.css?1607837373" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1607837373" rel="stylesheet">
+    <link href="/css/theme.css?1607837373" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1607837373" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1607360123" rel="stylesheet">
+    <link href="/css/theme-blue.css?1607837373" rel="stylesheet">
     
-    <link href="/css/index.css?1607360123" rel="stylesheet">
+    <link href="/css/index.css?1607837373" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1607360123"></script>
+    <script src="/js/jquery-3.3.1.min.js?1607837373"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +60,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1607360123"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1607360123"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1607837373"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1607837373"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/go-gatekeeper.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1607360123"></script>
+<script type="text/javascript" src="/js/search.js?1607837373"></script>
 
     
   </div>
@@ -189,6 +189,7 @@
     <li><a href="#client-secret"><code>client-secret</code></a></li>
     <li><a href="#redirection-url"><code>redirection-url</code></a></li>
     <li><a href="#revocation-url"><code>revocation-url</code></a></li>
+    <li><a href="#skip-openid-provider-tls-verify"><code>skip-openid-provider-tls-verify</code></a></li>
   </ul>
 </nav>
     </div>
@@ -263,16 +264,16 @@ This listener has no TLS support, and uses the same configuration syntax as <cod
 <div class="config-details"><ul>
 <li>Environment Variable: <code>DISCOVERY_URL</code></li>
 <li>Example: <code>https://keycloak.localhost/auth/realms/applications</code> (refer to <a href="https://github.com/go-gatekeeper/demo-docker-compose">demo</a>)</li>
-<li>Required: Yes, unless <code>skip-token-verification</code> is set, and louketo is in reverse proxy mode</li>
+<li>Required: Yes, unless <code>skip-token-verification</code> is set, and gatekeeper is in reverse proxy mode</li>
 <li>Default: None</li>
 <li>Related: <code>skip-openid-provider-tls-verify</code>, <code>openid-provider-proxy</code>, <code>openid-provider-timeout</code></li>
 </ul>
 </div>
 
-<p>louketo will get information about the authorization server through the
+<p>gatekeeper will get information about the authorization server through the
 authorization server&rsquo;s <code>openid-configuration</code> well-known URI, according to
 <a href="https://tools.ietf.org/html/rfc8414">RFC8414</a>.</p>
-<p>louketo will grab this metadata from <code>discovery-url</code> + <code>/.well-known/openid-configuration</code>
+<p>gatekeeper will grab this metadata from <code>discovery-url</code> + <code>/.well-known/openid-configuration</code>
 as is registered with <a href="https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml">IANA</a></p>
 <p>Specify <code>discovery-url</code> without <code>/.well-known/openid-configuration</code>.</p>
 <p>Here are links to information about <code>discovery-url</code>s for some other OAuth providers</p>
@@ -288,7 +289,7 @@ as is registered with <a href="https://www.iana.org/assignments/well-known-uris/
 <div class="config-details"><ul>
 <li>Environment Variable: <code>CLIENT_ID</code></li>
 <li>Example: <code>whoami</code> (refer to <a href="https://github.com/go-gatekeeper/demo-docker-compose">demo</a>)</li>
-<li>Required: Yes, unless <code>skip-token-verification</code> is set, and louketo is in reverse proxy mode</li>
+<li>Required: Yes, unless <code>skip-token-verification</code> is set, and gatekeeper is in reverse proxy mode</li>
 <li>Default: None</li>
 <li>Related: <code>client-secret</code></li>
 </ul>
@@ -297,7 +298,7 @@ as is registered with <a href="https://www.iana.org/assignments/well-known-uris/
 <p><code>client-id</code> is the Client ID for an OAuth2 client (your app is the OAuth2 client, in
 this case).</p>
 <h4 id="in-reverse-proxy-mode">In reverse proxy mode</h4>
-<p>As part of the OAuth2 authorization code flow, louketo will use <code>client-id</code> and
+<p>As part of the OAuth2 authorization code flow, gatekeeper will use <code>client-id</code> and
 <code>client-secret</code> to authenticate with the server when it needs to</p>
 <ul>
 <li>exchange the authorization code for tokens</li>
@@ -311,7 +312,7 @@ Owner Password Credentials flow.</p>
 <p><code>client-id</code> is also used to check access tokens to ensure that <code>client-id</code> is
 among the audiences in the <code>aud</code> field of the token.</p>
 <h4 id="in-forward-signing-proxy-mode">In forward-signing proxy mode</h4>
-<p>louketo will use louketo <code>client-id</code> and <code>client-secret</code> to authenticate with
+<p>gatekeeper will use <code>client-id</code> and <code>client-secret</code> to authenticate with
 the server to get tokens for outbound requests.</p>
 <hr>
 <h2 id="client-secret"><code>client-secret</code></h2>
@@ -319,7 +320,7 @@ the server to get tokens for outbound requests.</p>
 <div class="config-details"><ul>
 <li>Environment Variable: <code>CLIENT_SECRET</code></li>
 <li>Example: <code>932475b6-9748-41b8-8fd7-c6ce2d845ece</code> (refer to <a href="https://github.com/go-gatekeeper/demo-docker-compose">demo</a>)</li>
-<li>Required: Yes, unless <code>skip-token-verification</code> is set, and louketo is in reverse proxy mode</li>
+<li>Required: Yes, unless <code>skip-token-verification</code> is set, and gatekeeper is in reverse proxy mode</li>
 <li>Default: None</li>
 <li>Related: <code>client-id</code></li>
 </ul>
@@ -334,7 +335,7 @@ credentials. See <code>client-id</code> for how this is used.</p>
 <div class="config-details"><ul>
 <li>Environment Variable: <code>REDIRECTION_URL</code></li>
 <li>Example: <code>932475b6-9748-41b8-8fd7-c6ce2d845ece</code> (refer to <a href="https://github.com/go-gatekeeper/demo-docker-compose">demo</a>)</li>
-<li>Required: Yes, unless <code>skip-token-verification</code> is set, and louketo is in reverse proxy mode</li>
+<li>Required: Yes, unless <code>skip-token-verification</code> is set, and gatekeeper is in reverse proxy mode</li>
 <li>Default: None</li>
 <li>Related: <code>client-id</code></li>
 </ul>
@@ -359,9 +360,28 @@ credentials. See <code>client-id</code> for how this is used.</p>
 discovery-url response will be used as the <code>revocation-url</code>. If neither is
 available, no logout at the authorization provider will be done.</p>
 <p><code>revocation-url</code> is used during the logout process. When the <code>/oauth/logout</code>
-endpoint on louketo is called, louketo will request revocation of this
+endpoint on gatekeeper is called, gatekeeper will request revocation of this
 session&rsquo;s refresh token by doing an authenticated <code>POST</code> to this <code>revocation-url</code>
 with the refresh token.</p>
+<hr>
+<h2 id="skip-openid-provider-tls-verify"><code>skip-openid-provider-tls-verify</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: false</li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>If <code>skip-openid-provider-tls-verify</code> is set to <code>true</code>, gatekeeper will skip
+verification of the authorization server&rsquo;s (or OpenID provider&rsquo;s, in this case)
+certificate chain and host name.</p>
+<p>gatekeeper will accept any certificate presented by the server and any host name
+in that certificate.</p>
+<p>This flag is directly used to configure <code>InsecureSkipVerify</code> in <a href="https://golang.org/pkg/crypto/tls/">golang&rsquo;s tls
+package</a>.</p>
 <hr>
 
 
@@ -430,19 +450,19 @@ with the refresh token.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1607360123"></script>
-    <script src="/js/perfect-scrollbar.min.js?1607360123"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1607360123"></script>
-    <script src="/js/jquery.sticky.js?1607360123"></script>
-    <script src="/js/featherlight.min.js?1607360123"></script>
-    <script src="/js/highlight.pack.js?1607360123"></script>
+    <script src="/js/clipboard.min.js?1607837373"></script>
+    <script src="/js/perfect-scrollbar.min.js?1607837373"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1607837373"></script>
+    <script src="/js/jquery.sticky.js?1607837373"></script>
+    <script src="/js/featherlight.min.js?1607837373"></script>
+    <script src="/js/highlight.pack.js?1607837373"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1607360123"></script>
-    <script src="/js/learn.js?1607360123"></script>
-    <script src="/js/hugo-learn.js?1607360123"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1607837373"></script>
+    <script src="/js/learn.js?1607837373"></script>
+    <script src="/js/hugo-learn.js?1607837373"></script>
     
         
-            <script src="/mermaid/mermaid.js?1607360123"></script>
+            <script src="/mermaid/mermaid.js?1607837373"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
