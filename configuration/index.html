@@ -12,21 +12,21 @@
     <title>Configuration Options - Gatekeeper</title>
 
     
-    <link href="/css/nucleus.css?1607837373" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1607837373" rel="stylesheet">
-    <link href="/css/hybrid.css?1607837373" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1607837373" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1607837373" rel="stylesheet">
-    <link href="/css/auto-complete.css?1607837373" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1607837373" rel="stylesheet">
-    <link href="/css/theme.css?1607837373" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1607837373" rel="stylesheet">
+    <link href="/css/nucleus.css?1607879247" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1607879247" rel="stylesheet">
+    <link href="/css/hybrid.css?1607879247" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1607879247" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1607879247" rel="stylesheet">
+    <link href="/css/auto-complete.css?1607879247" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1607879247" rel="stylesheet">
+    <link href="/css/theme.css?1607879247" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1607879247" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1607837373" rel="stylesheet">
+    <link href="/css/theme-blue.css?1607879247" rel="stylesheet">
     
-    <link href="/css/index.css?1607837373" rel="stylesheet">
+    <link href="/css/index.css?1607879247" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1607837373"></script>
+    <script src="/js/jquery-3.3.1.min.js?1607879247"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +60,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1607837373"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1607837373"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1607879247"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1607879247"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/go-gatekeeper.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1607837373"></script>
+<script type="text/javascript" src="/js/search.js?1607879247"></script>
 
     
   </div>
@@ -190,6 +190,9 @@
     <li><a href="#redirection-url"><code>redirection-url</code></a></li>
     <li><a href="#revocation-url"><code>revocation-url</code></a></li>
     <li><a href="#skip-openid-provider-tls-verify"><code>skip-openid-provider-tls-verify</code></a></li>
+    <li><a href="#openid-provider-proxy"><code>openid-provider-proxy</code></a></li>
+    <li><a href="#openid-provider-timeout"><code>openid-provider-timeout</code></a></li>
+    <li><a href="#base-uri"><code>base-uri</code></a></li>
   </ul>
 </nav>
     </div>
@@ -218,7 +221,7 @@
 	<h2 id="listen"><code>listen</code></h2>
 
 <div class="config-details"><ul>
-<li>Environment Variable: <code>LISTEN</code></li>
+<li>Environment Variable: <code>PROXY_LISTEN</code></li>
 <li>Example: <code>:80</code></li>
 <li>Required: Yes</li>
 <li>Default: None</li>
@@ -244,7 +247,7 @@
 <h2 id="listen-http"><code>listen-http</code></h2>
 
 <div class="config-details"><ul>
-<li>Environment Variable: <code>LISTEN_HTTP</code></li>
+<li>Environment Variable: <code>PROXY_LISTEN_HTTP</code></li>
 <li>Example: <code>:80</code></li>
 <li>Required: Yes</li>
 <li>Default: None</li>
@@ -262,7 +265,7 @@ This listener has no TLS support, and uses the same configuration syntax as <cod
 <h2 id="discovery-url"><code>discovery-url</code></h2>
 
 <div class="config-details"><ul>
-<li>Environment Variable: <code>DISCOVERY_URL</code></li>
+<li>Environment Variable: <code>PROXY_DISCOVERY_URL</code></li>
 <li>Example: <code>https://keycloak.localhost/auth/realms/applications</code> (refer to <a href="https://github.com/go-gatekeeper/demo-docker-compose">demo</a>)</li>
 <li>Required: Yes, unless <code>skip-token-verification</code> is set, and gatekeeper is in reverse proxy mode</li>
 <li>Default: None</li>
@@ -287,7 +290,7 @@ as is registered with <a href="https://www.iana.org/assignments/well-known-uris/
 <h2 id="client-id"><code>client-id</code></h2>
 
 <div class="config-details"><ul>
-<li>Environment Variable: <code>CLIENT_ID</code></li>
+<li>Environment Variable: <code>PROXY_CLIENT_ID</code></li>
 <li>Example: <code>whoami</code> (refer to <a href="https://github.com/go-gatekeeper/demo-docker-compose">demo</a>)</li>
 <li>Required: Yes, unless <code>skip-token-verification</code> is set, and gatekeeper is in reverse proxy mode</li>
 <li>Default: None</li>
@@ -318,7 +321,7 @@ the server to get tokens for outbound requests.</p>
 <h2 id="client-secret"><code>client-secret</code></h2>
 
 <div class="config-details"><ul>
-<li>Environment Variable: <code>CLIENT_SECRET</code></li>
+<li>Environment Variable: <code>PROXY_CLIENT_SECRET</code></li>
 <li>Example: <code>932475b6-9748-41b8-8fd7-c6ce2d845ece</code> (refer to <a href="https://github.com/go-gatekeeper/demo-docker-compose">demo</a>)</li>
 <li>Required: Yes, unless <code>skip-token-verification</code> is set, and gatekeeper is in reverse proxy mode</li>
 <li>Default: None</li>
@@ -333,7 +336,7 @@ credentials. See <code>client-id</code> for how this is used.</p>
 <h2 id="redirection-url"><code>redirection-url</code></h2>
 
 <div class="config-details"><ul>
-<li>Environment Variable: <code>REDIRECTION_URL</code></li>
+<li>Environment Variable: <code>PROXY_REDIRECTION_URL</code></li>
 <li>Example: <code>932475b6-9748-41b8-8fd7-c6ce2d845ece</code> (refer to <a href="https://github.com/go-gatekeeper/demo-docker-compose">demo</a>)</li>
 <li>Required: Yes, unless <code>skip-token-verification</code> is set, and gatekeeper is in reverse proxy mode</li>
 <li>Default: None</li>
@@ -348,7 +351,7 @@ credentials. See <code>client-id</code> for how this is used.</p>
 <h2 id="revocation-url"><code>revocation-url</code></h2>
 
 <div class="config-details"><ul>
-<li>Environment Variable: <code>REVOCATION_URL</code></li>
+<li>Environment Variable: <code>PROXY_REVOCATION_URL</code></li>
 <li>Example: <code>https://keycloak.localhost/auth/realms/applications/protocol/openid-connect/logout</code></li>
 <li>Required: No. Will attempt to discover this url from OpenID discovery-url response</li>
 <li>Default: None</li>
@@ -382,6 +385,57 @@ certificate chain and host name.</p>
 in that certificate.</p>
 <p>This flag is directly used to configure <code>InsecureSkipVerify</code> in <a href="https://golang.org/pkg/crypto/tls/">golang&rsquo;s tls
 package</a>.</p>
+<hr>
+<h2 id="openid-provider-proxy"><code>openid-provider-proxy</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>http://proxy.example.com:80</code></li>
+<li>Required: No</li>
+<li>Default: No proxy</li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Gatekeeper will use this proxy for requests to the OpenID provider, for example
+to reach the discovery url, to get tokens, etc.</p>
+<hr>
+<h2 id="openid-provider-timeout"><code>openid-provider-timeout</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>3s</code>, or <code>314ms</code>, (any string that can be parsed by <a href="https://golang.org/pkg/time/#ParseDuration">ParseDuration</a></li>
+<li>Required: No</li>
+<li>Default: <code>30s</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Timeout for pulling OpenID configuration from the OpenID provider. Will be
+parsed by <a href="https://golang.org/pkg/time/#ParseDuration">ParseDuration</a>.</p>
+<hr>
+<h2 id="base-uri"><code>base-uri</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>PROXY_BASE_URI</code></li>
+<li>Example: <code>/base-uri</code></li>
+<li>Required: No</li>
+<li>Default: <code>&quot;&quot;</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p><code>base-uri</code> is the the base URI of your app. This is where your app lives at the
+domain, so if your domain is <code>https://www.example.com</code> and your app is at the
+path <code>https://www.example.com/app</code>, then base URI should be <code>/app</code>.</p>
+<p>This is used to</p>
+<ul>
+<li>build oauth related paths, such as the <code>/logout</code> endpoint</li>
+<li>set the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Path_attribute:~:text=Path%20attribute,-The">path for cookies</a>,
+which determines which parts of your site the cookie is valid on, which in
+turn determines if the user remains authenticated as they visit different
+parts of the site</li>
+</ul>
 <hr>
 
 
@@ -450,19 +504,19 @@ package</a>.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1607837373"></script>
-    <script src="/js/perfect-scrollbar.min.js?1607837373"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1607837373"></script>
-    <script src="/js/jquery.sticky.js?1607837373"></script>
-    <script src="/js/featherlight.min.js?1607837373"></script>
-    <script src="/js/highlight.pack.js?1607837373"></script>
+    <script src="/js/clipboard.min.js?1607879247"></script>
+    <script src="/js/perfect-scrollbar.min.js?1607879247"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1607879247"></script>
+    <script src="/js/jquery.sticky.js?1607879247"></script>
+    <script src="/js/featherlight.min.js?1607879247"></script>
+    <script src="/js/highlight.pack.js?1607879247"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1607837373"></script>
-    <script src="/js/learn.js?1607837373"></script>
-    <script src="/js/hugo-learn.js?1607837373"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1607879247"></script>
+    <script src="/js/learn.js?1607879247"></script>
+    <script src="/js/hugo-learn.js?1607879247"></script>
     
         
-            <script src="/mermaid/mermaid.js?1607837373"></script>
+            <script src="/mermaid/mermaid.js?1607879247"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
