@@ -5,28 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.78.2" />
     <meta name="description" content="Gatekeeper&#39;s homepage">
-<meta name="author" content="go-gatekeeper">
+<meta name="author" content="gogatekeeper">
 
     <link rel="shortcut icon" href="/logo/logo.svg" type="image/x-icon" />
 
     <title>Configuration Options - Gatekeeper</title>
 
     
-    <link href="/css/nucleus.css?1607879247" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1607879247" rel="stylesheet">
-    <link href="/css/hybrid.css?1607879247" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1607879247" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1607879247" rel="stylesheet">
-    <link href="/css/auto-complete.css?1607879247" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1607879247" rel="stylesheet">
-    <link href="/css/theme.css?1607879247" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1607879247" rel="stylesheet">
+    <link href="/css/nucleus.css?1608948765" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1608948765" rel="stylesheet">
+    <link href="/css/hybrid.css?1608948765" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1608948765" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1608948765" rel="stylesheet">
+    <link href="/css/auto-complete.css?1608948765" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1608948765" rel="stylesheet">
+    <link href="/css/theme.css?1608948765" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1608948765" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1607879247" rel="stylesheet">
+    <link href="/css/theme-blue.css?1608948765" rel="stylesheet">
     
-    <link href="/css/index.css?1607879247" rel="stylesheet">
+    <link href="/css/index.css?1608948765" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1607879247"></script>
+    <script src="/js/jquery-3.3.1.min.js?1608948765"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +60,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1607879247"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1607879247"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1608948765"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1608948765"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/go-gatekeeper.github.io\/";
+        var baseurl = "https:\/\/gogatekeeper.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1607879247"></script>
+<script type="text/javascript" src="/js/search.js?1608948765"></script>
 
     
   </div>
@@ -112,7 +112,7 @@
         <ul>
           
               <li>
-                  <a class="padding" href="https://github.com/go-gatekeeper/gatekeeper"><i class='fab fa-github fa-fw'></i> Github repo</a>
+                  <a class="padding" href="https://github.com/gogatekeeper/gatekeeper"><i class='fab fa-github fa-fw'></i> Github repo</a>
               </li>
           
               <li>
@@ -193,6 +193,12 @@
     <li><a href="#openid-provider-proxy"><code>openid-provider-proxy</code></a></li>
     <li><a href="#openid-provider-timeout"><code>openid-provider-timeout</code></a></li>
     <li><a href="#base-uri"><code>base-uri</code></a></li>
+    <li><a href="#oauth-uri"><code>oauth-uri</code></a></li>
+    <li><a href="#oauth-uri-1"><code>oauth-uri</code></a></li>
+    <li><a href="#scopes"><code>scopes</code></a></li>
+    <li><a href="#upstream-url"><code>upstream-url</code></a></li>
+    <li><a href="#upstream-ca"><code>upstream-ca</code></a></li>
+    <li><a href="#resources"><code>resources</code></a></li>
   </ul>
 </nav>
     </div>
@@ -266,7 +272,7 @@ This listener has no TLS support, and uses the same configuration syntax as <cod
 
 <div class="config-details"><ul>
 <li>Environment Variable: <code>PROXY_DISCOVERY_URL</code></li>
-<li>Example: <code>https://keycloak.localhost/auth/realms/applications</code> (refer to <a href="https://github.com/go-gatekeeper/demo-docker-compose">demo</a>)</li>
+<li>Example: <code>https://keycloak.localhost/auth/realms/applications</code> (refer to <a href="https://github.com/gogatekeeper/demo-docker-compose">demo</a>)</li>
 <li>Required: Yes, unless <code>skip-token-verification</code> is set, and gatekeeper is in reverse proxy mode</li>
 <li>Default: None</li>
 <li>Related: <code>skip-openid-provider-tls-verify</code>, <code>openid-provider-proxy</code>, <code>openid-provider-timeout</code></li>
@@ -291,7 +297,7 @@ as is registered with <a href="https://www.iana.org/assignments/well-known-uris/
 
 <div class="config-details"><ul>
 <li>Environment Variable: <code>PROXY_CLIENT_ID</code></li>
-<li>Example: <code>whoami</code> (refer to <a href="https://github.com/go-gatekeeper/demo-docker-compose">demo</a>)</li>
+<li>Example: <code>whoami</code> (refer to <a href="https://github.com/gogatekeeper/demo-docker-compose">demo</a>)</li>
 <li>Required: Yes, unless <code>skip-token-verification</code> is set, and gatekeeper is in reverse proxy mode</li>
 <li>Default: None</li>
 <li>Related: <code>client-secret</code></li>
@@ -322,7 +328,7 @@ the server to get tokens for outbound requests.</p>
 
 <div class="config-details"><ul>
 <li>Environment Variable: <code>PROXY_CLIENT_SECRET</code></li>
-<li>Example: <code>932475b6-9748-41b8-8fd7-c6ce2d845ece</code> (refer to <a href="https://github.com/go-gatekeeper/demo-docker-compose">demo</a>)</li>
+<li>Example: <code>932475b6-9748-41b8-8fd7-c6ce2d845ece</code> (refer to <a href="https://github.com/gogatekeeper/demo-docker-compose">demo</a>)</li>
 <li>Required: Yes, unless <code>skip-token-verification</code> is set, and gatekeeper is in reverse proxy mode</li>
 <li>Default: None</li>
 <li>Related: <code>client-id</code></li>
@@ -337,7 +343,7 @@ credentials. See <code>client-id</code> for how this is used.</p>
 
 <div class="config-details"><ul>
 <li>Environment Variable: <code>PROXY_REDIRECTION_URL</code></li>
-<li>Example: <code>932475b6-9748-41b8-8fd7-c6ce2d845ece</code> (refer to <a href="https://github.com/go-gatekeeper/demo-docker-compose">demo</a>)</li>
+<li>Example: <code>932475b6-9748-41b8-8fd7-c6ce2d845ece</code> (refer to <a href="https://github.com/gogatekeeper/demo-docker-compose">demo</a>)</li>
 <li>Required: Yes, unless <code>skip-token-verification</code> is set, and gatekeeper is in reverse proxy mode</li>
 <li>Default: None</li>
 <li>Related: <code>client-id</code></li>
@@ -437,6 +443,109 @@ turn determines if the user remains authenticated as they visit different
 parts of the site</li>
 </ul>
 <hr>
+<h2 id="oauth-uri"><code>oauth-uri</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>PROXY_OAUTH_URI</code></li>
+<li>Example: <code>/base-uri</code></li>
+<li>Required: No</li>
+<li>Default: <code>&quot;/oauth&quot;</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>This is the prefix for the OAuth endpoints on gatekeeper, such as (if the default <code>/oauth</code> is used, and <code>base-uri</code> is <code>&quot;&quot;</code>)</p>
+<ul>
+<li><code>/oauth/authorization</code>: Redirects to the authorization server</li>
+<li><code>/oauth/callback</code>: Handles callback (response) from the authorization server</li>
+<li><code>/oauth/expired</code>: Checks if the token has expired</li>
+<li><code>/oauth/health</code>: The healthcheck endpoint for gatekeeper</li>
+<li><code>/oauth/logout?redirect=url</code>: Direct the browser here to log out</li>
+<li><code>/oauth/token</code>: Return the token in a json</li>
+<li><code>/oauth/login</code>: A generic endpoint for clients to perform a user credentials
+login to the authorization server</li>
+</ul>
+<hr>
+<h2 id="oauth-uri-1"><code>oauth-uri</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>PROXY_OAUTH_URI</code></li>
+<li>Example: <code>/base-uri</code></li>
+<li>Required: No</li>
+<li>Default: <code>&quot;/oauth&quot;</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>This is the prefix for the OAuth endpoints on gatekeeper, such as (if the default <code>/oauth</code> is used, and <code>base-uri</code> is <code>&quot;&quot;</code>)</p>
+<ul>
+<li><code>/oauth/authorization</code>: Redirects to the authorization server</li>
+<li><code>/oauth/callback</code>: Handles callback (response) from the authorization server</li>
+<li><code>/oauth/expired</code>: Checks if the token has expired</li>
+<li><code>/oauth/health</code>: The healthcheck endpoint for gatekeeper</li>
+<li><code>/oauth/logout?redirect=url</code>: Direct the browser here to log out</li>
+<li><code>/oauth/token</code>: Return the token in a json</li>
+<li><code>/oauth/login</code>: A generic endpoint for clients to perform a user credentials
+login to the authorization server</li>
+</ul>
+<hr>
+<h2 id="scopes"><code>scopes</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: (yaml/json list) <code>[&quot;offline&quot;, &quot;foobar&quot;]</code></li>
+<li>Required: No</li>
+<li>Default: Always appends these: <code>[&quot;openid&quot;, &quot;email&quot;, &quot;profile&quot;]</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>These are the scopes that are requested when the client is redirected to the authorization server.</p>
+<p>In Keycloak, these are the scopes that are either created as part of the
+client, to client scopes in the realm. For Keycloak, scopes are strings tagged
+to mappers. If requested by the client, the associated mappers will be applied
+on the tokens.</p>
+<hr>
+<h2 id="upstream-url"><code>upstream-url</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>PROXY_UPSTREAM_URL</code></li>
+<li>Example: <code>http://whoami:80</code> (refer to <a href="https://github.com/gogatekeeper/demo-docker-compose">demo</a>)</li>
+<li>Required: Yes</li>
+<li>Default: None</li>
+<li>Related: <code>upstream-ca</code></li>
+</ul>
+</div>
+
+<p>This tells gatekeeper how to contact the upstream (your app/service that is protected by gatekeeper)</p>
+<hr>
+<h2 id="upstream-ca"><code>upstream-ca</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>/tmp/path-to-ca-cert</code> (PEM encoded)</li>
+<li>Required: No</li>
+<li>Default: None (Will use system cert store)</li>
+<li>Related: <code>upstream-url</code></li>
+</ul>
+</div>
+
+<p>This is the TLS CA certificate that will be used to verify TLS when communicating with the upstream.</p>
+<hr>
+<h2 id="resources"><code>resources</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: Refer to <a href="https://github.com/gogatekeeper/demo-docker-compose">demo</a></li>
+<li>Required: Yes</li>
+<li>Default: None</li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>These tell gatekeeper how to authenticate or authorize the resources at the upstream.</p>
+<p>TODO add more details.</p>
+<hr>
 
 
 
@@ -504,19 +613,19 @@ parts of the site</li>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1607879247"></script>
-    <script src="/js/perfect-scrollbar.min.js?1607879247"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1607879247"></script>
-    <script src="/js/jquery.sticky.js?1607879247"></script>
-    <script src="/js/featherlight.min.js?1607879247"></script>
-    <script src="/js/highlight.pack.js?1607879247"></script>
+    <script src="/js/clipboard.min.js?1608948765"></script>
+    <script src="/js/perfect-scrollbar.min.js?1608948765"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1608948765"></script>
+    <script src="/js/jquery.sticky.js?1608948765"></script>
+    <script src="/js/featherlight.min.js?1608948765"></script>
+    <script src="/js/highlight.pack.js?1608948765"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1607879247"></script>
-    <script src="/js/learn.js?1607879247"></script>
-    <script src="/js/hugo-learn.js?1607879247"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1608948765"></script>
+    <script src="/js/learn.js?1608948765"></script>
+    <script src="/js/hugo-learn.js?1608948765"></script>
     
         
-            <script src="/mermaid/mermaid.js?1607879247"></script>
+            <script src="/mermaid/mermaid.js?1608948765"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

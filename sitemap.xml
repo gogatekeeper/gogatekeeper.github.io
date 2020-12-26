@@ -3,20 +3,20 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://go-gatekeeper.github.io/configuration/</loc>
+    <loc>https://gogatekeeper.github.io/configuration/</loc>
   </url>
   
   <url>
-    <loc>https://go-gatekeeper.github.io/</loc>
+    <loc>https://gogatekeeper.github.io/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://go-gatekeeper.github.io/categories/</loc>
+    <loc>https://gogatekeeper.github.io/categories/</loc>
   </url>
   
   <url>
-    <loc>https://go-gatekeeper.github.io/tags/</loc>
+    <loc>https://gogatekeeper.github.io/tags/</loc>
   </url>
   
 </urlset>
