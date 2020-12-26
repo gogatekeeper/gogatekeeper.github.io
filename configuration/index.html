@@ -12,21 +12,21 @@
     <title>Configuration Options - Gatekeeper</title>
 
     
-    <link href="/css/nucleus.css?1608948765" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1608948765" rel="stylesheet">
-    <link href="/css/hybrid.css?1608948765" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1608948765" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1608948765" rel="stylesheet">
-    <link href="/css/auto-complete.css?1608948765" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1608948765" rel="stylesheet">
-    <link href="/css/theme.css?1608948765" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1608948765" rel="stylesheet">
+    <link href="/css/nucleus.css?1609003606" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1609003606" rel="stylesheet">
+    <link href="/css/hybrid.css?1609003606" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1609003606" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1609003606" rel="stylesheet">
+    <link href="/css/auto-complete.css?1609003606" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1609003606" rel="stylesheet">
+    <link href="/css/theme.css?1609003606" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1609003606" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1608948765" rel="stylesheet">
+    <link href="/css/theme-blue.css?1609003606" rel="stylesheet">
     
-    <link href="/css/index.css?1608948765" rel="stylesheet">
+    <link href="/css/index.css?1609003606" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1608948765"></script>
+    <script src="/js/jquery-3.3.1.min.js?1609003606"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +60,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1608948765"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1608948765"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1609003606"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1609003606"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/gogatekeeper.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1608948765"></script>
+<script type="text/javascript" src="/js/search.js?1609003606"></script>
 
     
   </div>
@@ -199,6 +199,18 @@
     <li><a href="#upstream-url"><code>upstream-url</code></a></li>
     <li><a href="#upstream-ca"><code>upstream-ca</code></a></li>
     <li><a href="#resources"><code>resources</code></a></li>
+    <li><a href="#headers"><code>headers</code></a></li>
+    <li><a href="#preserve-host"><code>preserve-host</code></a></li>
+    <li><a href="#request-id-header"><code>request-id-header</code></a></li>
+    <li><a href="#enable-logout-redirect"><code>enable-logout-redirect</code></a></li>
+    <li><a href="#enable-default-deny"><code>enable-default-deny</code></a></li>
+    <li><a href="#enable-encrypted-token"><code>enable-encrypted-token</code></a></li>
+    <li><a href="#force-encrypted-cookie"><code>force-encrypted-cookie</code></a></li>
+    <li><a href="#enable-logging"><code>enable-logging</code></a></li>
+    <li><a href="#enable-json-logging"><code>enable-json-logging</code></a></li>
+    <li><a href="#enable-forwarding"><code>enable-forwarding</code></a></li>
+    <li><a href="#enable-security-filter"><code>enable-security-filter</code></a></li>
+    <li><a href="#enable-refresh-tokens"><code>enable-refresh-tokens</code></a></li>
   </ul>
 </nav>
     </div>
@@ -546,6 +558,182 @@ on the tokens.</p>
 <p>These tell gatekeeper how to authenticate or authorize the resources at the upstream.</p>
 <p>TODO add more details.</p>
 <hr>
+<h2 id="headers"><code>headers</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example:
+<pre><code>headers:
+  x-foo-bar: baz
+</code></pre></li>
+<li>Required: No</li>
+<li>Default: None</li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Add custom headers to the request that goes upstream. The headers will be capitalized:</p>
+<pre><code>x-foo-bar =&gt; X-Foo-Bar
+X-FooBar =&gt; X-Foobar
+X-FOO-BAR =&gt; X-Foo-Bar
+</code></pre><hr>
+<h2 id="preserve-host"><code>preserve-host</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>If <code>preserve-host</code> is <code>true</code>, the <code>Host</code> header that gatekeeper receives will be forwarded to the upstream service. Otherwise, the <code>Host</code> header will be set to whatever gatekeeper uses to make the request to the upstream.</p>
+<hr>
+<h2 id="request-id-header"><code>request-id-header</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>PROXY_REQUEST_ID_HEADER</code></li>
+<li>Example: <code>&quot;X-Request-Id&quot;</code></li>
+<li>Required: No</li>
+<li>Default: <code>&quot;X-Request-Id&quot;</code></li>
+<li>Related: <code>enable-request-id</code></li>
+</ul>
+</div>
+
+<p>The HTTP header name for the autogenerated request ID sent as a header to the upstream service. Will be added if <code>enable-request-id</code> is set to true.</p>
+<hr>
+<h2 id="enable-logout-redirect"><code>enable-logout-redirect</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>If <code>true</code>, when the logout address is accessed, the user will be redirected to the identity provider on logout, with a <code>redirect_uri</code> pointing back to the gatekeeper service.</p>
+<p>The identity provider can use <code>redirect_uri</code> to redirect the user back to gatekeeper again.</p>
+<p>If <code>false</code>, when the logout address is accessed, the user will remain at gatekeeper&rsquo;s logout url.</p>
+<hr>
+<h2 id="enable-default-deny"><code>enable-default-deny</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: <code>resources</code></li>
+</ul>
+</div>
+
+<p>Used in conjunction with <code>resources</code> for authorization.</p>
+<p>If set, gatekeeper will deny all requests to the upstream by default. This can then be relaxed with definition of <code>resources</code>.</p>
+<hr>
+<h2 id="enable-encrypted-token"><code>enable-encrypted-token</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: <code>force-encrypted-cookie</code>, <code>encryption-key</code></li>
+</ul>
+</div>
+
+<p>If set, gatekeeper will</p>
+<ul>
+<li>Encrypt the access token in the cookie that is set for the browser with <code>encryption-key</code></li>
+<li>Assume that incoming access tokens in the <code>Authorization</code> header are also
+encrypted, and will decrypt the token before using it</li>
+</ul>
+<hr>
+<h2 id="force-encrypted-cookie"><code>force-encrypted-cookie</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: <code>enable-encrypted-token</code>, <code>encryption-key</code></li>
+</ul>
+</div>
+
+<p>Same as <code>enable-encrypted-token</code>. TODO confirm this.</p>
+<hr>
+<h2 id="enable-logging"><code>enable-logging</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>If set, requests to gatekeeper are logged. Here&rsquo;s a sample of the information that is logged:</p>
+<pre><code>2020-12-26T06:21:38.851Z        info    src/middleware.go:146   client request  {&quot;latency&quot;: 0.000209767, &quot;status&quot;: 303, &quot;bytes&quot;: 322, &quot;client_ip&quot;: &quot;172.18.0.2:39368&quot;, &quot;method&quot;: &quot;GET&quot;, &quot;path&quot;: &quot;/oauth/authorize&quot;}
+</code></pre><p><code>raw path</code> is also logged if it is different from <code>path</code> and is not <code>&quot;&quot;</code>. See <a href="https://golang.org/pkg/net/url/">go docs</a> for the difference between <code>Path</code> and <code>RawPath</code>.</p>
+<hr>
+<h2 id="enable-json-logging"><code>enable-json-logging</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>If set, logging is formatted in json.</p>
+<p>If the regular log is like this,</p>
+<pre><code>2020-12-26T06:21:38.851Z        info    src/middleware.go:146   client request  {&quot;latency&quot;: 0.000209767, &quot;status&quot;: 303, &quot;bytes&quot;: 322, &quot;client_ip&quot;: &quot;172.18.0.2:39368&quot;, &quot;method&quot;: &quot;GET&quot;, &quot;path&quot;: &quot;/oauth/authorize&quot;}
+</code></pre><p>the json version is like this.</p>
+<pre><code>{&quot;level&quot;:&quot;info&quot;,&quot;ts&quot;:&quot;2020-12-26T06:21:38.851Z&quot;,&quot;caller&quot;:&quot;src/middleware.go:146&quot;,&quot;msg&quot;:&quot;client request&quot;,&quot;latency&quot;:0.000209767,&quot;status&quot;:303,&quot;bytes&quot;:322,&quot;client_ip&quot;:&quot;172.18.0.2:39368&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;path&quot;:&quot;/oauth/authorize&quot;}
+</code></pre><hr>
+<h2 id="enable-forwarding"><code>enable-forwarding</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Sets gatekeeper in a forwarding proxy mode, for signing outbound requests. This is mutually exclusive with the default reverse proxy mode.</p>
+<hr>
+<h2 id="enable-security-filter"><code>enable-security-filter</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>PROXY_ENABLE_SECURITY_FILTER</code></li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Enables a bunch of security checks on the request using middleware. TODO add more detail.</p>
+<hr>
+<h2 id="enable-refresh-tokens"><code>enable-refresh-tokens</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>PROXY_ENABLE_REFRESH_TOKEN</code></li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Set this to get gatekeeper to handle refreshing of access tokens. Otherwise, gatekeeper will just re-authenticate with the authorization server whenever the access token expires.</p>
+<hr>
 
 
 
@@ -613,19 +801,19 @@ on the tokens.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1608948765"></script>
-    <script src="/js/perfect-scrollbar.min.js?1608948765"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1608948765"></script>
-    <script src="/js/jquery.sticky.js?1608948765"></script>
-    <script src="/js/featherlight.min.js?1608948765"></script>
-    <script src="/js/highlight.pack.js?1608948765"></script>
+    <script src="/js/clipboard.min.js?1609003606"></script>
+    <script src="/js/perfect-scrollbar.min.js?1609003606"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1609003606"></script>
+    <script src="/js/jquery.sticky.js?1609003606"></script>
+    <script src="/js/featherlight.min.js?1609003606"></script>
+    <script src="/js/highlight.pack.js?1609003606"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1608948765"></script>
-    <script src="/js/learn.js?1608948765"></script>
-    <script src="/js/hugo-learn.js?1608948765"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1609003606"></script>
+    <script src="/js/learn.js?1609003606"></script>
+    <script src="/js/hugo-learn.js?1609003606"></script>
     
         
-            <script src="/mermaid/mermaid.js?1608948765"></script>
+            <script src="/mermaid/mermaid.js?1609003606"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

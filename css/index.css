@@ -18,3 +18,8 @@ div.config-details li {
   list-style-type: none;
   font-size: 80%;
 }
+
+div.config-details pre {
+  margin: 0 0 0 10px;
+  padding: 3px 6px;
+}
