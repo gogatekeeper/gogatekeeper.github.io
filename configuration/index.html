@@ -12,21 +12,21 @@
     <title>Configuration Options - Gatekeeper</title>
 
     
-    <link href="/css/nucleus.css?1609003606" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1609003606" rel="stylesheet">
-    <link href="/css/hybrid.css?1609003606" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1609003606" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1609003606" rel="stylesheet">
-    <link href="/css/auto-complete.css?1609003606" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1609003606" rel="stylesheet">
-    <link href="/css/theme.css?1609003606" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1609003606" rel="stylesheet">
+    <link href="/css/nucleus.css?1611556681" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1611556681" rel="stylesheet">
+    <link href="/css/hybrid.css?1611556681" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1611556681" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1611556681" rel="stylesheet">
+    <link href="/css/auto-complete.css?1611556681" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1611556681" rel="stylesheet">
+    <link href="/css/theme.css?1611556681" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1611556681" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1609003606" rel="stylesheet">
+    <link href="/css/theme-blue.css?1611556681" rel="stylesheet">
     
-    <link href="/css/index.css?1609003606" rel="stylesheet">
+    <link href="/css/index.css?1611556681" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1609003606"></script>
+    <script src="/js/jquery-3.3.1.min.js?1611556681"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +60,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1609003606"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1609003606"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1611556681"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1611556681"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/gogatekeeper.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1609003606"></script>
+<script type="text/javascript" src="/js/search.js?1611556681"></script>
 
     
   </div>
@@ -211,6 +211,71 @@
     <li><a href="#enable-forwarding"><code>enable-forwarding</code></a></li>
     <li><a href="#enable-security-filter"><code>enable-security-filter</code></a></li>
     <li><a href="#enable-refresh-tokens"><code>enable-refresh-tokens</code></a></li>
+    <li><a href="#enable-session-cookies"><code>enable-session-cookies</code></a></li>
+    <li><a href="#enable-login-handler"><code>enable-login-handler</code></a></li>
+    <li><a href="#enable-token-header"><code>enable-token-header</code></a></li>
+    <li><a href="#enable-authorization-header"><code>enable-authorization-header</code></a></li>
+    <li><a href="#enable-authorization-cookies"><code>enable-authorization-cookies</code></a></li>
+    <li><a href="#enable-https-redirect"><code>enable-https-redirect</code></a></li>
+    <li><a href="#enable-profiling"><code>enable-profiling</code></a></li>
+    <li><a href="#enable-metrics"><code>enable-metrics</code></a></li>
+    <li><a href="#filter-browser-xss"><code>filter-browser-xss</code></a></li>
+    <li><a href="#filter-content-nosniff"><code>filter-content-nosniff</code></a></li>
+    <li><a href="#filter-frame-deny"><code>filter-frame-deny</code></a></li>
+    <li><a href="#content-security-policy"><code>content-security-policy</code></a></li>
+    <li><a href="#localhost-metrics"><code>localhost-metrics</code></a></li>
+    <li><a href="#enable-compression"><code>enable-compression</code></a></li>
+    <li><a href="#access-token-duration"><code>access-token-duration</code></a></li>
+    <li><a href="#client-auth-method"><code>client-auth-method</code></a></li>
+    <li><a href="#cookie-domain"><code>cookie-domain</code></a></li>
+    <li><a href="#cookie-access-name"><code>cookie-access-name</code></a></li>
+    <li><a href="#cookie-refresh-name"><code>cookie-refresh-name</code></a></li>
+    <li><a href="#secure-cookie"><code>secure-cookie</code></a></li>
+    <li><a href="#http-only-cookie"><code>http-only-cookie</code></a></li>
+    <li><a href="#same-site-cookie"><code>same-site-cookie</code></a></li>
+    <li><a href="#match-claims"><code>match-claims</code></a></li>
+    <li><a href="#add-claims"><code>add-claims</code></a></li>
+    <li><a href="#tls-cert"><code>tls-cert</code></a></li>
+    <li><a href="#tls-private-key"><code>tls-private-key</code></a></li>
+    <li><a href="#tls-ca-certificate"><code>tls-ca-certificate</code></a></li>
+    <li><a href="#tls-ca-key"><code>tls-ca-key</code></a></li>
+    <li><a href="#tls-client-certificate"><code>tls-client-certificate</code></a></li>
+    <li><a href="#skip-upstream-tls-verify"><code>skip-upstream-tls-verify</code></a></li>
+    <li><a href="#cors-origins"><code>cors-origins</code></a></li>
+    <li><a href="#cors-methods"><code>cors-methods</code></a></li>
+    <li><a href="#cors-headers"><code>cors-headers</code></a></li>
+    <li><a href="#cors-exposed-headers"><code>cors-exposed-headers</code></a></li>
+    <li><a href="#cors-credentials"><code>cors-credentials</code></a></li>
+    <li><a href="#cors-max-age"><code>cors-max-age</code></a></li>
+    <li><a href="#hostnames"><code>hostnames</code></a></li>
+    <li><a href="#store-url"><code>store-url</code></a></li>
+    <li><a href="#encryption-key"><code>encryption-key</code></a></li>
+    <li><a href="#no-redirects"><code>no-redirects</code></a></li>
+    <li><a href="#skip-token-verification"><code>skip-token-verification</code></a></li>
+    <li><a href="#skip-access-token-issuer-check"><code>skip-access-token-issuer-check</code></a></li>
+    <li><a href="#skip-access-token-clientid-check"><code>skip-access-token-clientid-check</code></a></li>
+    <li><a href="#upstream-keepalives"><code>upstream-keepalives</code></a></li>
+    <li><a href="#upstream-timeout"><code>upstream-timeout</code></a></li>
+    <li><a href="#upstream-keepalive-timeout"><code>upstream-keepalive-timeout</code></a></li>
+    <li><a href="#upstream-tls-handshake-timeout"><code>upstream-tls-handshake-timeout</code></a></li>
+    <li><a href="#upstream-response-header-timeout"><code>upstream-response-header-timeout</code></a></li>
+    <li><a href="#upstream-expect-continue-timeout"><code>upstream-expect-continue-timeout</code></a></li>
+    <li><a href="#verbose"><code>verbose</code></a></li>
+    <li><a href="#enabled-proxy-protocol"><code>enabled-proxy-protocol</code></a></li>
+    <li><a href="#max-idle-connections"><code>max-idle-connections</code></a></li>
+    <li><a href="#max-idle-connections-per-host"><code>max-idle-connections-per-host</code></a></li>
+    <li><a href="#server-read-timeout"><code>server-read-timeout</code></a></li>
+    <li><a href="#server-write-timeout"><code>server-write-timeout</code></a></li>
+    <li><a href="#server-idle-timeout"><code>server-idle-timeout</code></a></li>
+    <li><a href="#use-letsencrypt"><code>use-letsencrypt</code></a></li>
+    <li><a href="#letsencrypt-cache-dir"><code>letsencrypt-cache-dir</code></a></li>
+    <li><a href="#sign-in-page"><code>sign-in-page</code></a></li>
+    <li><a href="#forbidden-page"><code>forbidden-page</code></a></li>
+    <li><a href="#tags"><code>tags</code></a></li>
+    <li><a href="#forwarding-username"><code>forwarding-username</code></a></li>
+    <li><a href="#forwarding-password"><code>forwarding-password</code></a></li>
+    <li><a href="#forwarding-domains"><code>forwarding-domains</code></a></li>
+    <li><a href="#disable-all-logging"><code>disable-all-logging</code></a></li>
   </ul>
 </nav>
     </div>
@@ -624,7 +689,7 @@ X-FOO-BAR =&gt; X-Foo-Bar
 <li>Environment Variable: None</li>
 <li>Example: <code>true</code> or <code>false</code></li>
 <li>Required: No</li>
-<li>Default: <code>false</code></li>
+<li>Default: <code>true</code></li>
 <li>Related: <code>resources</code></li>
 </ul>
 </div>
@@ -706,7 +771,7 @@ encrypted, and will decrypt the token before using it</li>
 </ul>
 </div>
 
-<p>Sets gatekeeper in a forwarding proxy mode, for signing outbound requests. This is mutually exclusive with the default reverse proxy mode.</p>
+<p>Sets gatekeeper in a forward proxy mode, for signing outbound requests. This is mutually exclusive with the default reverse proxy mode.</p>
 <hr>
 <h2 id="enable-security-filter"><code>enable-security-filter</code></h2>
 
@@ -734,6 +799,1018 @@ encrypted, and will decrypt the token before using it</li>
 
 <p>Set this to get gatekeeper to handle refreshing of access tokens. Otherwise, gatekeeper will just re-authenticate with the authorization server whenever the access token expires.</p>
 <hr>
+<h2 id="enable-session-cookies"><code>enable-session-cookies</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>true</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>If this is set, gatekeeper will define the lifetime of the cookies (containing access and refresh tokens) to &ldquo;Session&rdquo;, indicating that they should be cleared when the browser closes.</p>
+<p>The actual behavior, however, depends on how the browser is configured. Some browsers restore sessions when restarting, so session cookies might get restored. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Define_the_lifetime_of_a_cookie">MDN: Lifetime of a cookie</a>.</p>
+<p>If this is set to <code>false</code>, the cookies will be set to expire when the token expires.</p>
+<hr>
+<h2 id="enable-login-handler"><code>enable-login-handler</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>PROXY_ENABLE_LOGIN_HANDLER</code></li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>If this is set, the login handler will be enabled.</p>
+<p>By default, the login handler listens at <code>/oauth/login</code>, and looks for <code>username</code> and <code>password</code> in <code>POST</code> data from the browser. It will then obtain an access token and refresh token from the authorization server and then manage the tokens for the user.</p>
+<hr>
+<h2 id="enable-token-header"><code>enable-token-header</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>true</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>If this is set, the access token will be added to the request going to the upstream service as the <code>X-Auth-Token</code> header.</p>
+<hr>
+<h2 id="enable-authorization-header"><code>enable-authorization-header</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>PROXY_ENABLE_AUTHORIZATION_HEADER</code></li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>true</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>If this is set, the access token will be added to the request going to the upstream service as the <code>Authorization</code> header:</p>
+<pre><code>Authorization: Bearer &lt;access_token&gt;
+</code></pre><hr>
+<h2 id="enable-authorization-cookies"><code>enable-authorization-cookies</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>PROXY_ENABLE_AUTHORIZATION_COOKIES</code></li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>true</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>If this is set, gatekeeper will add the authorization cookies to the upstream proxy request (containing access and refresh tokens).</p>
+<hr>
+<h2 id="enable-https-redirect"><code>enable-https-redirect</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: <code>enable-security-filter</code></li>
+</ul>
+</div>
+
+<p>If this is set, gatekeeper will redirect all http requests to https.</p>
+<p><code>enable-security-filter</code> has to be <code>true</code> for this to work.</p>
+<hr>
+<h2 id="enable-profiling"><code>enable-profiling</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Setting this turns on profiling. TODO add more information about profiling.</p>
+<hr>
+<h2 id="enable-metrics"><code>enable-metrics</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Setting this enables the prometheus metrics collector at <code>/oauth/metrics</code>. TODO add more information about metrics.</p>
+<hr>
+<h2 id="filter-browser-xss"><code>filter-browser-xss</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: <code>enable-security-filter</code></li>
+</ul>
+</div>
+
+<p>Setting this adds the <code>X-XSS-Protection</code> header for the browser with <code>mode=block</code>. More information <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection">on MDN</a></p>
+<p><code>enable-security-filter</code> has to be <code>true</code> to enable this.</p>
+<hr>
+<h2 id="filter-content-nosniff"><code>filter-content-nosniff</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: <code>enable-security-filter</code></li>
+</ul>
+</div>
+
+<p>Setting this adds the <code>X-Content-Type-Options</code> header for the browser with the value <code>nosniff</code>. More information <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options">on MDN</a></p>
+<p><code>enable-security-filter</code> has to be <code>true</code> to enable this.</p>
+<hr>
+<h2 id="filter-frame-deny"><code>filter-frame-deny</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: <code>enable-security-filter</code></li>
+</ul>
+</div>
+
+<p>Setting this adds the <code>X-Frame-Options</code> header with the value of <code>DENY</code>. More information <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">on MDN</a></p>
+<p><code>enable-security-filter</code> has to be <code>true</code> to enable this.</p>
+<hr>
+<h2 id="content-security-policy"><code>content-security-policy</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>default-src 'self'</code></li>
+<li>Required: No</li>
+<li>Default: Unspecified</li>
+<li>Related: <code>enable-security-filter</code></li>
+</ul>
+</div>
+
+<p>This configuration option allows you to specify your Content Security Policy. More information <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">on MDN</a></p>
+<p><code>enable-security-filter</code> has to be <code>true</code> to enable this.</p>
+<hr>
+<h2 id="localhost-metrics"><code>localhost-metrics</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Enforces that the metrics page can only been requested from the loopback interface, on <code>localhost</code>.</p>
+<hr>
+<h2 id="enable-compression"><code>enable-compression</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Enables gzip compression for response from gatekeeper to browser.</p>
+<hr>
+<h2 id="access-token-duration"><code>access-token-duration</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>48h</code>, (any string that can be parsed by <a href="https://golang.org/pkg/time/#ParseDuration">ParseDuration</a></li>
+<li>Required: No</li>
+<li>Default: 720 hours (30 days)</li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Defines a default access token lifetime if the expiration was not defined by the authorization server.</p>
+<p>The access token expiration is normally read from the refresh token, but if that lifetime is not positive, the configured <code>access-token-duration</code> will be used instead.</p>
+<hr>
+<h2 id="client-auth-method"><code>client-auth-method</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>PROXY_CLIENT_AUTH_METHOD</code></li>
+<li>Example: <code>secret-basic</code> or <code>secret-body</code> (only 2 options)</li>
+<li>Required: No</li>
+<li>Default: <code>secret-basic</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Defines how gatekeeper will authenticate with the authorization server. TODO check if this is being used.</p>
+<hr>
+<h2 id="cookie-domain"><code>cookie-domain</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>foobar.org</code></li>
+<li>Required: No</li>
+<li>Default: Uses the domain from the <code>Host</code> header</li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Defines the <code>Domain</code> attribute for the cookies stored on the browser.</p>
+<p>Since the cookies contain the access and refresh token, this setting determines how much of your domain this sign-in covers.</p>
+<p>For example, if <code>Domain</code> is set to <code>foobar.org</code>, when the user visits <code>foobar.org</code> or any of the subdomains <code>baz.foobar.org</code> or <code>quux.foobar.org</code>, the cookies will be sent to gatekeeper and the user will continue to be signed in.</p>
+<p>See more information about setting the <code>Domain</code> attribute at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Define_where_cookies_are_sent">MDN</a></p>
+<hr>
+<h2 id="cookie-access-name"><code>cookie-access-name</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>foobar</code> (any cookie name)</li>
+<li>Required: No</li>
+<li>Default: <code>kc-access</code></li>
+<li>Related: <code>cookie-refresh-name</code></li>
+</ul>
+</div>
+
+<p>Defines the name of the cookie that gatekeeper will use to store the access token.</p>
+<hr>
+<h2 id="cookie-refresh-name"><code>cookie-refresh-name</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>foobar</code> (any cookie name)</li>
+<li>Required: No</li>
+<li>Default: <code>kc-state</code></li>
+<li>Related: <code>cookie-access-name</code></li>
+</ul>
+</div>
+
+<p>Defines the name of the cookie that gatekeeper will use to store the refresh token.</p>
+<hr>
+<h2 id="secure-cookie"><code>secure-cookie</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>true</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>If true, gatekeeper will set the <code>Secure</code> attribute on the cookies used for access and refresh tokens.</p>
+<p>If set, the cookies will only be sent to the server with an encrypted request over the HTTPS protocol: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Restrict_access_to_cookies">MDN</a>.</p>
+<hr>
+<h2 id="http-only-cookie"><code>http-only-cookie</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>true</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>If true, gatekeeper will set the <code>HttpOnly</code> attribute on the cookies used for access and refresh tokens.</p>
+<p>If set, the cookies will only be sent to the server; they will be inaccessible to the JavaScript <code>Document.cookie</code> API: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Restrict_access_to_cookies:~:text=A%20cookie%20with%20the%20HttpOnly%20attribute%20is%20inaccessible%20to%20the%20JavaScript%20Document.cookie%20API">MDN</a>.</p>
+<hr>
+<h2 id="same-site-cookie"><code>same-site-cookie</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: Three options: <code>Strict</code>, <code>Lax</code>, <code>None</code> (case-sensitive)</li>
+<li>Required: No</li>
+<li>Default: <code>Lax</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Gatekeeper uses this config option to set the <code>SameSite</code> attribute on the cookies used for access and refresh tokens.</p>
+<p>See more at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#SameSite_attribute:~:text=SameSite%20attribute,-The">MDN</a></p>
+<hr>
+<h2 id="match-claims"><code>match-claims</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>aud=myapp</code>, <code>iss=http://example.*</code></li>
+<li>Required: No</li>
+<li>Default: No required claim matching</li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>The proxy supports adding a variable list of claim matches against the
+presented tokens for additional access control. You can match the <code>iss</code> or
+<code>aud</code> to the token or custom attributes; each of the matches are regexes.</p>
+<p>If <code>match-claims</code> is defined, the user&rsquo;s claims must match all of the requested
+claims. You can configure this using the configuration file, like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">match-claims</span>:
+  <span style="color:#f92672">aud</span>: <span style="color:#ae81ff">openvpn</span>
+  <span style="color:#f92672">iss</span>: <span style="color:#ae81ff">https://keycloak.example.com/auth/realms/commons</span>
+</code></pre></div><p>or via the CLI, like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">--match-claims<span style="color:#f92672">=</span>aud<span style="color:#f92672">=</span>openvpn --match-claims<span style="color:#f92672">=</span>iss<span style="color:#f92672">=</span>https://keycloak.example.com/realms/commons
+</code></pre></div><p>The above definition means that the user&rsquo;s token must</p>
+<ul>
+<li>contain both <code>aud</code> and <code>iss</code> claims AND</li>
+<li><code>aud</code> must match <code>openvpn</code>, and <code>iss</code> must match <code>https://keycloak.example.com/realms/commons</code>
+<ul>
+<li>so <code>foo_openvpn_bar</code> will match <code>openvpn</code></li>
+<li>use a tighter regex <code>^openvpn$</code> to match <code>openvpn</code> strictly</li>
+</ul>
+</li>
+</ul>
+<p>Another example: limitting the email domain permitted: if you want to limit to
+only users on the <code>example.com</code> domain:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">match-claims</span>:
+  <span style="color:#f92672">email</span>: <span style="color:#ae81ff">^.*@example.com$</span>
+</code></pre></div><p>The adapter supports matching on multi-value strings claims. The match
+will succeed if ONE of the values matches, for example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">match-claims</span>:
+  <span style="color:#f92672">perms</span>: <span style="color:#ae81ff">perm1</span>
+</code></pre></div><p>will successfully match</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;iss&#34;</span>: <span style="color:#e6db74">&#34;https://sso.example.com&#34;</span>,
+  <span style="color:#f92672">&#34;sub&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+  <span style="color:#f92672">&#34;perms&#34;</span>: [<span style="color:#e6db74">&#34;perm1&#34;</span>, <span style="color:#e6db74">&#34;perm2&#34;</span>]
+}
+</code></pre></div><hr>
+<h2 id="add-claims"><code>add-claims</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>email</code>, <code>email|Foo-Bar-Email</code></li>
+<li>Required: No</li>
+<li>Default: No claims added as headers</li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Allows you to inject claims from the token as headers in the upstream request.</p>
+<p>For example, to inject the user&rsquo;s <code>email</code>, specify</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">add-claims</span>:
+  - <span style="color:#ae81ff">email</span>
+</code></pre></div><p>If the token contains the <code>email</code> claim, the value of the claim will be
+injected as the header <code>X-Auth-Email</code> in the upstream request.</p>
+<p>The <code>X-Auth-</code> prefix is automatically added, and the header is also capitalized
+and joined with dashes. Any symbols in this list: <code>_$&gt;&lt;[].,+-/'%^&amp;*()!\</code> will
+be replaced by dashes (<code>-</code>).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">add-claims</span>:
+  - <span style="color:#ae81ff">given_name</span>
+</code></pre></div><p>The above will inject <code>given_name</code> from the token as the <code>X-Auth-Given-Name</code>
+header in the request going upstream.</p>
+<p>To control the name of the header, use the pipe (<code>|</code>) character:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">add-claims</span>:
+  - <span style="color:#ae81ff">`email|Foo-Bar-Email`</span>
+</code></pre></div><p>The above will inject <code>email</code> from the token as the <code>Foo-Bar-Email</code> header in
+the request going upstream.</p>
+<hr>
+<h2 id="tls-cert"><code>tls-cert</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>/path/to/tls/certificate</code></li>
+<li>Required: Required if <code>tls-private-key</code> is specified</li>
+<li>Default: No TLS configured for gatekeeper</li>
+<li>Related: <code>tls-private-key</code></li>
+</ul>
+</div>
+
+<p><code>tls-cert</code> is the path to the PEM encoded certificate file. This certificate
+file may contain intermediate certificates following the leaf certificate to
+form a certificate chain.</p>
+<p>This certificate is served to clients connecting to gatekeeper, for both
+forward and reverse proxy mode.</p>
+<p>This path is watched for changes and gatekeeper will pick up new certificate
+files.</p>
+<hr>
+<h2 id="tls-private-key"><code>tls-private-key</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>/path/to/tls/private/key</code></li>
+<li>Required: Required if <code>tls-cert</code> is specified</li>
+<li>Default: No TLS configured for gatekeeper</li>
+<li>Related: <code>tls-cert</code></li>
+</ul>
+</div>
+
+<p><code>tls-private-key</code> is the path to the PEM encoded private key file.</p>
+<p>This private key should be the private key for <code>tls-cert</code>.</p>
+<p>This path is watched for changes and gatekeeper will pick up new private key
+files.</p>
+<hr>
+<h2 id="tls-ca-certificate"><code>tls-ca-certificate</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>/path/to/tls/ca/certificate</code></li>
+<li>Required: Required if <code>tls-ca-key</code> is specified</li>
+<li>Default: Will handle requests using self-signed certificate from elazarl/goproxy</li>
+<li>Related: <code>tls-ca-key</code></li>
+</ul>
+</div>
+
+<p><code>tls-ca-certificate</code> is the path to a PEM encoded certificate file. This allows
+gatekeeper to sign a TLS certificate for itself, using this
+<code>tls-ca-certificate</code> and <code>tls-ca-key</code>.</p>
+<blockquote>
+<p>TODO: verify if this CA cert/key only used for <code>CONNECT</code>?</p>
+</blockquote>
+<p>This path is not watched for changes, unlike for <code>tls-private-key</code> and
+<code>tls-cert</code>.</p>
+<hr>
+<h2 id="tls-ca-key"><code>tls-ca-key</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>/path/to/tls/ca/key</code></li>
+<li>Required: Required if <code>tls-ca-certificate</code> is specified</li>
+<li>Default: Will handle requests using self-signed certificate from elazarl/goproxy</li>
+<li>Related: <code>tls-ca-certificate</code></li>
+</ul>
+</div>
+
+<p><code>tls-ca-key</code> is the path to a PEM encoded private key file. This allows
+gatekeeper to sign a TLS certificate for itself, using this
+<code>tls-ca-certificate</code> and <code>tls-ca-key</code>.</p>
+<p>This path is not watched for changes, unlike for <code>tls-private-key</code> and
+<code>tls-cert</code>.</p>
+<hr>
+<h2 id="tls-client-certificate"><code>tls-client-certificate</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>/path/to/tls/client/certificate</code></li>
+<li>Required: No</li>
+<li>Default: No client certificates used for upstream connections</li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>If <code>tls-client-ceritificate</code> is provided, this certificate will be used for
+upstream connections, for both forward and reverse proxy modes.</p>
+<p>This path is not watched for changes, unlike for <code>tls-private-key</code> and
+<code>tls-cert</code>.</p>
+<hr>
+<h2 id="skip-upstream-tls-verify"><code>skip-upstream-tls-verify</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>true</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Specify this to skip TLS verification for upstream requests.</p>
+<p>If <code>true</code>, gatekeeper will not verify the upstream&rsquo;s certificate chain and host
+name; gatekeeper will accept any certificate presented by the server and any
+host name in that certificate.</p>
+<hr>
+<h2 id="cors-origins"><code>cors-origins</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>https://example.com</code></li>
+<li>Required: No</li>
+<li>Default: No CORS headers will be added</li>
+<li>Related: <code>cors-methods</code>, <code>cors-headers</code>, <code>cors-exposed-headers</code>, <code>cors-credentials</code>, <code>cors-max-age</code></li>
+</ul>
+</div>
+
+<p>This is a list of origins that will be added to the <code>Access-Control-Allow-Origin</code> header.</p>
+<hr>
+<h2 id="cors-methods"><code>cors-methods</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>GET</code>, <code>POST</code></li>
+<li>Required: No</li>
+<li>Default: <code>[&quot;GET&quot;, &quot;POST&quot;, &quot;HEAD&quot;]</code></li>
+<li>Related: <code>cors-origins</code>, <code>cors-headers</code>, <code>cors-exposed-headers</code>, <code>cors-credentials</code>, <code>cors-max-age</code></li>
+</ul>
+</div>
+
+<p>This is a list of methods that will be added to the <code>Access-Control-Allow-Methods</code> header.</p>
+<blockquote>
+<p><code>cors-origins</code> has to be set before this configuration option takes effect</p>
+</blockquote>
+<hr>
+<h2 id="cors-headers"><code>cors-headers</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>X-Foo-Bar</code></li>
+<li>Required: No</li>
+<li>Default: <code>[&quot;Origin&quot;, &quot;Accept&quot;, &quot;Content-Type&quot;, &quot;X-Requested-With&quot;]</code></li>
+<li>Related: <code>cors-origins</code>, <code>cors-methods</code>, <code>cors-exposed-headers</code>, <code>cors-credentials</code>, <code>cors-max-age</code></li>
+</ul>
+</div>
+
+<p>This is a list of allowed headers that will be added to the <code>Access-Control-Allow-Headers</code> header.</p>
+<p><code>Origin</code> will always be appended to the requested list.</p>
+<blockquote>
+<p><code>cors-origins</code> has to be set before this configuration option takes effect</p>
+</blockquote>
+<hr>
+<h2 id="cors-exposed-headers"><code>cors-exposed-headers</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>X-Foo-Bar</code></li>
+<li>Required: No</li>
+<li>Default: <code>[]</code></li>
+<li>Related: <code>cors-origins</code>, <code>cors-methods</code>, <code>cors-headers</code>, <code>cors-credentials</code>, <code>cors-max-age</code></li>
+</ul>
+</div>
+
+<p>This is a list of headers that will be added to the <code>Access-Control-Expose-Headers</code> header.</p>
+<blockquote>
+<p><code>cors-origins</code> has to be set before this configuration option takes effect</p>
+</blockquote>
+<hr>
+<h2 id="cors-credentials"><code>cors-credentials</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: <code>cors-origins</code>, <code>cors-methods</code>, <code>cors-headers</code>, <code>cors-exposed-headers</code>, <code>cors-max-age</code></li>
+</ul>
+</div>
+
+<p>If set, gatekeeper will set the <code>Access-Control-Allow-Credentials</code> header with the value <code>true</code>.</p>
+<blockquote>
+<p><code>cors-origins</code> has to be set before this configuration option takes effect</p>
+</blockquote>
+<hr>
+<h2 id="cors-max-age"><code>cors-max-age</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>600</code></li>
+<li>Required: No</li>
+<li>Default: Use browser/client default</li>
+<li>Related: <code>cors-origins</code>, <code>cors-methods</code>, <code>cors-headers</code>, <code>cors-exposed-headers</code>, <code>cors-credentials</code></li>
+</ul>
+</div>
+
+<p>This sets how long (in seconds) the results of a preflight request can be
+cached for the request coming to gatekeeper. Sets the <code>Access-Control-Max-Age</code> header.</p>
+<blockquote>
+<p><code>cors-origins</code> has to be set before this configuration option takes effect</p>
+</blockquote>
+<hr>
+<h2 id="hostnames"><code>hostnames</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>service.com</code></li>
+<li>Required: No</li>
+<li>Default: <code>[]</code></li>
+<li>Related: <code>use-letsencrypt</code>, <code>enable-security-filter</code></li>
+</ul>
+</div>
+
+<p>If <code>hostnames</code> is set, gatekeeper will use this list of hostnames for the
+security filter (if <code>enable-security-filter</code> is set) to only allow requests for
+a hostname on this list of hostnames.</p>
+<p><code>hostnames</code> is also used with <code>use-letsencrypt</code>. If set, the certificate
+manager will only request certificates for the hostnames on the list. This can
+be left unspecified, but will result in a LetsEncrypt certificate being
+requested for any hostname for which gatekeeper is run on and may result in the
+gatekeeper reaching the CA&rsquo;s rate limit.</p>
+<hr>
+<h2 id="store-url"><code>store-url</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>redis://127.0.0.1:6379</code>, <code>boltdb:///tmp/tokens&quot;</code></li>
+<li>Required: No</li>
+<li>Default: Use a cookie for the refresh token</li>
+<li>Related: <code>encryption-key</code></li>
+</ul>
+</div>
+
+<p>This url must be a valid url. gatekeeper only supports redis and boltdb (bbolt)
+for now.</p>
+<p>If boltdb is used, the boltdb data snapshot file will be created at the
+specified path.</p>
+<p>This storage is used to store refresh tokens. If no storage is specified,
+gatekeeper will store the refresh token, encrypted, in a cookie that is
+returned to the client.</p>
+<p>In all cases (redis, boltdb, or cookie), the refresh token is encrypted with
+<code>encryption-key</code>.</p>
+<hr>
+<h2 id="encryption-key"><code>encryption-key</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>PROXY_ENCRYPTION_KEY</code></li>
+<li>Example: <code>yb96KrChmqnEOHuIbBi650T7VDqyTwLZ</code></li>
+<li>Required: Yes if <code>enable-refresh-tokens</code> is set</li>
+<li>Default: None</li>
+<li>Related: <code>encryption-key</code></li>
+</ul>
+</div>
+
+<p><code>encryption-key</code> is used to encrypt the refresh token.</p>
+<p>The <code>encryption-key</code> must be either 16 or 32 characters long. If it is 16
+characters long, AES-128 will be selected. Otherwise, AES-256 will be selected.</p>
+<hr>
+<h2 id="no-redirects"><code>no-redirects</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>If <code>true</code>, gatekeeper will just return a <code>401 Unauthorized</code> instead of
+redirecting the user to the authorization server.</p>
+<hr>
+<h2 id="skip-token-verification"><code>skip-token-verification</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>If <code>true</code>, gatekeeper will only verify expiration and roles, but skip all other
+token verification steps.</p>
+<hr>
+<h2 id="skip-access-token-issuer-check"><code>skip-access-token-issuer-check</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>If <code>true</code>, gatekeeper will not check that <code>iss</code> in the access token matches the
+issuer (Authorization server).</p>
+<hr>
+<h2 id="skip-access-token-clientid-check"><code>skip-access-token-clientid-check</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: <code>client-id</code></li>
+</ul>
+</div>
+
+<p>If <code>true</code>, gatekeeper will not check that the configured <code>client-id</code> is among
+the <code>aud</code> field of the access token.</p>
+<hr>
+<h2 id="upstream-keepalives"><code>upstream-keepalives</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>true</code></li>
+<li>Related: <code>upstream-keepalive-timeout</code></li>
+</ul>
+</div>
+
+<p>If <code>true</code> (the default), gatekeeper will use HTTP keep-alives when
+communicating with the upstream.</p>
+<hr>
+<h2 id="upstream-timeout"><code>upstream-timeout</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>3s</code>, or <code>314ms</code>, (any string that can be parsed by <a href="https://golang.org/pkg/time/#ParseDuration">ParseDuration</a></li>
+<li>Required: No</li>
+<li>Default: <code>10s</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Maximum amount of time that gatekeeper will wait to connect to the upstream.</p>
+<hr>
+<h2 id="upstream-keepalive-timeout"><code>upstream-keepalive-timeout</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>3s</code>, or <code>314ms</code>, (any string that can be parsed by <a href="https://golang.org/pkg/time/#ParseDuration">ParseDuration</a></li>
+<li>Required: No</li>
+<li>Default: <code>10s</code></li>
+<li>Related: <code>upstream-keepalives</code></li>
+</ul>
+</div>
+
+<p>The interval between keep-alive probes for an active network connection.</p>
+<hr>
+<h2 id="upstream-tls-handshake-timeout"><code>upstream-tls-handshake-timeout</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>3s</code>, or <code>314ms</code>, (any string that can be parsed by <a href="https://golang.org/pkg/time/#ParseDuration">ParseDuration</a></li>
+<li>Required: No</li>
+<li>Default: <code>10s</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Maximum amount of time that gatekeeper will wait for a TLS handshake.</p>
+<hr>
+<h2 id="upstream-response-header-timeout"><code>upstream-response-header-timeout</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>3s</code>, or <code>314ms</code>, (any string that can be parsed by <a href="https://golang.org/pkg/time/#ParseDuration">ParseDuration</a></li>
+<li>Required: No</li>
+<li>Default: <code>10s</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Maximum amount of time that gatekeeper will wait for the upstream&rsquo;s response
+headers after fully writing the request.</p>
+<hr>
+<h2 id="upstream-expect-continue-timeout"><code>upstream-expect-continue-timeout</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>3s</code>, or <code>314ms</code>, (any string that can be parsed by <a href="https://golang.org/pkg/time/#ParseDuration">ParseDuration</a></li>
+<li>Required: No</li>
+<li>Default: <code>10s</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Maximum amount of time that gatekeeper will wait for the upstream&rsquo;s first
+response headers after fully writing the request headers if the request has an
+&ldquo;Expect: 100-continue&rdquo; header.</p>
+<hr>
+<h2 id="verbose"><code>verbose</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Set <code>verbose</code> to <code>true</code> to turn on debug/verbose logging.</p>
+<hr>
+<h2 id="enabled-proxy-protocol"><code>enabled-proxy-protocol</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Enables the <code>PROXY</code> protocol for gatekeeper, provided by
+<a href="https://github.com/pires/go-proxyproto">proxyproto</a>. See more at
+<a href="https://www.haproxy.org/download/2.3/doc/proxy-protocol.txt">https://www.haproxy.org/download/2.3/doc/proxy-protocol.txt</a></p>
+<hr>
+<h2 id="max-idle-connections"><code>max-idle-connections</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>50</code></li>
+<li>Required: No</li>
+<li>Default: <code>100</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Maximum number of idle upstream/keycloak connections that gatekeeper will keep
+alive.</p>
+<hr>
+<h2 id="max-idle-connections-per-host"><code>max-idle-connections-per-host</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>25</code></li>
+<li>Required: No</li>
+<li>Default: <code>50</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>Maximum number of idle upstream/keycloak connections that gatekeeper will keep
+alive, per host. <code>max-idle-connections-per-host</code> must be a number &gt; 0 and &lt;=
+<code>max-idle-connections</code></p>
+<hr>
+<h2 id="server-read-timeout"><code>server-read-timeout</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>3s</code>, or <code>314ms</code>, (any string that can be parsed by <a href="https://golang.org/pkg/time/#ParseDuration">ParseDuration</a></li>
+<li>Required: No</li>
+<li>Default: <code>10s</code></li>
+<li>Related: <code>server-idle-timeout</code></li>
+</ul>
+</div>
+
+<p>This sets gatekeeper&rsquo;s maximum duration for reading the entire request from the
+client, including the body.</p>
+<hr>
+<h2 id="server-write-timeout"><code>server-write-timeout</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>3s</code>, or <code>314ms</code>, (any string that can be parsed by <a href="https://golang.org/pkg/time/#ParseDuration">ParseDuration</a></li>
+<li>Required: No</li>
+<li>Default: <code>10s</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>This sets gatekeeper&rsquo;s maximum duration before timing out writes of the response.</p>
+<hr>
+<h2 id="server-idle-timeout"><code>server-idle-timeout</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>3s</code>, or <code>314ms</code>, (any string that can be parsed by <a href="https://golang.org/pkg/time/#ParseDuration">ParseDuration</a></li>
+<li>Required: No</li>
+<li>Default: <code>120s</code></li>
+<li>Related: <code>server-read-timeout</code></li>
+</ul>
+</div>
+
+<p>This sets the maximum time gatekeeper will wait for the next request when
+keep-alives are enabled. If this is <code>0</code>, <code>server-read-timeout</code> is used. If
+<code>server-read-timeout</code> is also <code>0</code>, there is no timeout.</p>
+<hr>
+<h2 id="use-letsencrypt"><code>use-letsencrypt</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: <code>letsencrypt-cache-dir</code></li>
+</ul>
+</div>
+
+<p>If <code>true</code>, gatekeeper will request a certificate from Let&rsquo;s Encrypt.</p>
+<hr>
+<h2 id="letsencrypt-cache-dir"><code>letsencrypt-cache-dir</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>/tmp/letsencrypt</code></li>
+<li>Required: No</li>
+<li>Default: <code>./cache/</code></li>
+<li>Related: <code>use-letsencrypt</code></li>
+</ul>
+</div>
+
+<p>This path is used to store cached Let&rsquo;s Encrypt certificates.</p>
+<hr>
+<h2 id="sign-in-page"><code>sign-in-page</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>&quot;templates/sign_in.html.tmpl&quot;</code></li>
+<li>Required: No</li>
+<li>Default: No custom sign in page</li>
+<li>Related: <code>tags</code></li>
+</ul>
+</div>
+
+<p>By default, gatekeeper will immediately redirect users for
+authentication. Specify <code>sign-in-page</code>, the path to a custom sign-in page
+template, for gatekeeper will render this page and present it to the user. This
+can be used as a landing page for your site, to guide users to sign in at the
+authorization server.</p>
+<p>The sign-in page will have a <code>redirect</code> variable passed into the scope, which
+holds the OAuth redirection URL. Here&rsquo;s a sample custom sign-in page that you
+can use.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .redirect }}&#34;</span>&gt;Sign-in&lt;/<span style="color:#f92672">a</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>If you wish to pass additional variables into the templates, such as title,
+sitename and so on, you can use the <code>--tags key=pair</code> option, like this:
+<code>--tags title=&quot;This is my site&quot;</code> and the variable would be accessible from <code>{{ .title }}</code>.</p>
+<hr>
+<h2 id="forbidden-page"><code>forbidden-page</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>&quot;templates/forbidden.html.tmpl&quot;</code></li>
+<li>Required: No</li>
+<li>Default: No custom forbidden page</li>
+<li>Related: <code>tags</code></li>
+</ul>
+</div>
+
+<p>If <code>forbidden-page</code> is specified, gatekeeper will render this page and present
+it to the user when the user is not authorized to view some resource.</p>
+<p>The format for interpolating tags is the same as the one used in
+<code>sign-in-page</code>. <code>tags</code> will also be used to render the forbidden page.</p>
+<hr>
+<h2 id="tags"><code>tags</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>title=foobar</code></li>
+<li>Required: No</li>
+<li>Default: No tags for custom page rendering.</li>
+<li>Related: <code>sign-in-page</code>, <code>forbidden-page</code></li>
+</ul>
+</div>
+
+<p>The <code>tags</code> used when rendering the custom pages: <code>sign-in-page</code> and
+<code>forbidden-page</code>.</p>
+<hr>
+<h2 id="forwarding-username"><code>forwarding-username</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>PROXY_FORWARDING_USERNAME</code></li>
+<li>Example: <code>username</code></li>
+<li>Required: When gatekeeper is in forward proxy mode</li>
+<li>Default: None</li>
+<li>Related: <code>forwarding-password</code></li>
+</ul>
+</div>
+
+<p>This is the username used for logging in to the Authorization Server (OAuth2
+Resource Owner Password Credentials flow) when gatekeeper is in forward proxy
+mode.</p>
+<hr>
+<h2 id="forwarding-password"><code>forwarding-password</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: <code>PROXY_FORWARDING_PASSWORD</code></li>
+<li>Example: <code>password</code></li>
+<li>Required: When gatekeeper is in forward proxy mode</li>
+<li>Default: None</li>
+<li>Related: <code>forwarding-username</code></li>
+</ul>
+</div>
+
+<p>This is the password used for logging in to the Authorization Server (OAuth2
+Resource Owner Password Credentials flow) when gatekeeper is in forward proxy
+mode.</p>
+<hr>
+<h2 id="forwarding-domains"><code>forwarding-domains</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>example.com</code></li>
+<li>Required: No</li>
+<li>Default: Will add access token for any domains requested through gatekeeper.</li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>If configured, gatekeeper will only add an access token (do authorization for)
+to any request bound for any of the domains on this list. If not specified,
+gatekeeper will do authorization for all domains.</p>
+<p>Only used when gatekeeper is in forward proxy mode.</p>
+<hr>
+<h2 id="disable-all-logging"><code>disable-all-logging</code></h2>
+
+<div class="config-details"><ul>
+<li>Environment Variable: None</li>
+<li>Example: <code>true</code> or <code>false</code></li>
+<li>Required: No</li>
+<li>Default: <code>false</code></li>
+<li>Related: -</li>
+</ul>
+</div>
+
+<p>If <code>true</code>, gatekeeper will not log to stdout or stderr.</p>
 
 
 
@@ -801,19 +1878,19 @@ encrypted, and will decrypt the token before using it</li>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1609003606"></script>
-    <script src="/js/perfect-scrollbar.min.js?1609003606"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1609003606"></script>
-    <script src="/js/jquery.sticky.js?1609003606"></script>
-    <script src="/js/featherlight.min.js?1609003606"></script>
-    <script src="/js/highlight.pack.js?1609003606"></script>
+    <script src="/js/clipboard.min.js?1611556681"></script>
+    <script src="/js/perfect-scrollbar.min.js?1611556681"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1611556681"></script>
+    <script src="/js/jquery.sticky.js?1611556681"></script>
+    <script src="/js/featherlight.min.js?1611556681"></script>
+    <script src="/js/highlight.pack.js?1611556681"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1609003606"></script>
-    <script src="/js/learn.js?1609003606"></script>
-    <script src="/js/hugo-learn.js?1609003606"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1611556681"></script>
+    <script src="/js/learn.js?1611556681"></script>
+    <script src="/js/hugo-learn.js?1611556681"></script>
     
         
-            <script src="/mermaid/mermaid.js?1609003606"></script>
+            <script src="/mermaid/mermaid.js?1611556681"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
